@@ -8,7 +8,7 @@
 
 SmartUI is a deep learning model that takes hand-drawn UI designs and converts them into working HTML code. It uses an [image captioning](https://towardsdatascience.com/image-captioning-in-deep-learning-9cd23fb4d8d2) architecture to generate its HTML markup from hand-drawn website wireframes.
 
-For more information, check out this post: [Automating front-end development with deep learning](https://blog.insightdatascience.com/automated-front-end-development-using-deep-learning-3169dd086e82)
+For the complete project report, refer to this [document](https://docs.google.com/document/d/1u6UQylKXNLmIUuPX3DNRpMmh7_2ehH63OsmozTPDHZI/edit?usp=sharing)
 
 This project builds on the synthetically generated dataset and model architecture from [pix2code](https://github.com/tonybeltramelli/pix2code) by [Tony Beltramelli](https://github.com/tonybeltramelli) and the [Design Mockups](https://github.com/emilwallner/Screenshot-to-code-in-Keras) project from [Emil Wallner](https://github.com/emilwallner).
 
@@ -44,12 +44,9 @@ In case wget in not installed in your system, download the files directly:
 
 [Data](http://sketch-code.s3.amazonaws.com/data/all_data.zip) - Extract all the files and place in *data/all_data* directory
 
-[model_json.json](http://sketch-code.s3.amazonaws.com/model_json_weights/model_json.json)
+[model_json.json](http://sketch-code.s3.amazonaws.com/model_json_weights/model_json.json) and [model weights](http://sketch-code.s3.amazonaws.com/model_json_weights/weights.h5) - Place these files in *bin* directory
 
-[model weights](http://sketch-code.s3.amazonaws.com/model_json_weights/weights.h5)
-
-Place these files in *bin* directory
-
+The downloaded pre-trained model can be directly used. If you want to build your own model, you can use the downloaded data to train your model
 
 
 Converting an example drawn image into HTML code, using pretrained weights:
@@ -106,17 +103,3 @@ python train.py --data_input_path {path/to/folder/with/pngs/guis} \
       --model_weights_file ../bin/pretrained_weights.h5 \
       --augment_training_data 1
 ```
-
-Evalute the generated prediction using the [BLEU score](https://machinelearningmastery.com/calculate-bleu-score-for-text-python/)
-```sh
-cd src
-
-# evaluate single GUI prediction
-python evaluate_single_gui.py --original_gui_filepath  {path/to/original/gui/file} \
-      --predicted_gui_filepath {path/to/predicted/gui/file}
-
-# training starting with pretrained model
-python evaluate_batch_guis.py --original_guis_filepath  {path/to/folder/with/original/guis} \
-      --predicted_guis_filepath {path/to/folder/with/predicted/guis}
-```
-
