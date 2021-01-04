@@ -16,6 +16,8 @@ View the code walkthrough and demo [here](https://youtube.com).
 
 ## Setup
 
+<b>It is advised to run the project on Google Collab for better performance. Check the demo video.</b>
+
 For running the project locally:
 ### Prerequisites
 
@@ -27,8 +29,6 @@ For running the project locally:
 ```sh
 pip install -r requirements.txt
 ```
-
-<b>It is advised to run the project on Google Collab for better performance. Check the demo video.</b>
 
 ## Example Usage
 
