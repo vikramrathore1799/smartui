@@ -1,4 +1,4 @@
-# SketchCode
+# SmartUI
 
 ![](https://img.shields.io/badge/python-3-brightgreen.svg) ![](https://img.shields.io/badge/tensorflow-1.1.0-orange.svg)
 
@@ -6,7 +6,7 @@
 
 ![Preview](https://github.com/vikramrathore1799/smartui/blob/main/header_image.png)
 
-SketchCode is a deep learning model that takes hand-drawn web mockups and converts them into working HTML code. It uses an [image captioning](https://towardsdatascience.com/image-captioning-in-deep-learning-9cd23fb4d8d2) architecture to generate its HTML markup from hand-drawn website wireframes.
+SmartUI is a deep learning model that takes hand-drawn UI designs and converts them into working HTML code. It uses an [image captioning](https://towardsdatascience.com/image-captioning-in-deep-learning-9cd23fb4d8d2) architecture to generate its HTML markup from hand-drawn website wireframes.
 
 For more information, check out this post: [Automating front-end development with deep learning](https://blog.insightdatascience.com/automated-front-end-development-using-deep-learning-3169dd086e82)
 
@@ -32,7 +32,7 @@ pip install -r requirements.txt
 Download the data and pretrained weights:
 ```sh
 # Getting the data, 1,700 images, 342mb
-git clone https://github.com/ashnkumar/sketch-code.git
+git clone https://github.com/vikramrathore1799/smartui.git
 cd sketch-code
 cd scripts
 
@@ -40,6 +40,15 @@ cd scripts
 sh get_data.sh
 sh get_pretrained_model.sh
 ```
+In case wget in not installed in your system, download the files directly:
+[Data](http://sketch-code.s3.amazonaws.com/data/all_data.zip)
+Extract all the files and place in *data/all_data* directory
+
+[model_json.json](http://sketch-code.s3.amazonaws.com/model_json_weights/model_json.json)
+[model weights](http://sketch-code.s3.amazonaws.com/model_json_weights/weights.h5)
+Place these files in *bin* directory
+
+
 
 Converting an example drawn image into HTML code, using pretrained weights:
 ```sh
@@ -109,26 +118,3 @@ python evaluate_batch_guis.py --original_guis_filepath  {path/to/folder/with/ori
       --predicted_guis_filepath {path/to/folder/with/predicted/guis}
 ```
 
-## License
-
-### The MIT License (MIT)
-
-Copyright (c) 2018 Ashwin Kumar<ash.nkumar@gmail.com@gmail.com>
-
-> Permission is hereby granted, free of charge, to any person obtaining a copy
-> of this software and associated documentation files (the "Software"), to deal
-> in the Software without restriction, including without limitation the rights
-> to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-> copies of the Software, and to permit persons to whom the Software is
-> furnished to do so, subject to the following conditions:
->
-> The above copyright notice and this permission notice shall be included in
-> all copies or substantial portions of the Software.
->
-> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-> THE SOFTWARE.
