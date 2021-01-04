@@ -41,11 +41,13 @@ sh get_data.sh
 sh get_pretrained_model.sh
 ```
 In case wget in not installed in your system, download the files directly:
-[Data](http://sketch-code.s3.amazonaws.com/data/all_data.zip)
-Extract all the files and place in *data/all_data* directory
+
+[Data](http://sketch-code.s3.amazonaws.com/data/all_data.zip) - Extract all the files and place in *data/all_data* directory
 
 [model_json.json](http://sketch-code.s3.amazonaws.com/model_json_weights/model_json.json)
+
 [model weights](http://sketch-code.s3.amazonaws.com/model_json_weights/weights.h5)
+
 Place these files in *bin* directory
 
 
