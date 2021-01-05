@@ -12,7 +12,7 @@ This project builds on the synthetically generated dataset and model architectur
 
 For the complete project report, refer to this [document](https://docs.google.com/document/d/1u6UQylKXNLmIUuPX3DNRpMmh7_2ehH63OsmozTPDHZI/edit?usp=sharing)
 
-View the code walkthrough and demo [here](https://youtube.com).
+View the code walkthrough and demo [here](https://drive.google.com/file/d/11kNx1W-IlpwzuSDDCKzaIug4HDV6PI5H/view?usp=sharing).
 
 ## Setup
 
